@@ -6,19 +6,17 @@ def randomlist():
         nums.append(n)
     return (nums)
 
-def msort(mid, nlist):
-    print(mid)
+def msort( nlist):
+    mid = len(nlist) // 2
+    print(nlist)
+    if len(nlist) <= 1:
+        return nlist
     
-    print(nlist[:mid])
-    
-    print(nlist[mid:])
+    msort((nlist[:mid]))
 
 def main():
     nlist = randomlist()
-
-    mid = len(nlist) // 2
-    
-    msort(mid,nlist)
+    print(msort(nlist))
 
 if __name__ == "__main__":
     main()
